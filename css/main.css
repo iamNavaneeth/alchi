@@ -1062,12 +1062,17 @@ header .social-links ul li a:focus {
 .main-content-tablecell #counter span {
 	float: left;
 	text-align: right;
-	color: rgba(255, 255, 255, 0.3);
+	color: rgba(255, 255, 255, 0.5);
 	font-family: "roboto-black", sans-serif;
 	font-size: 5em;
 	line-height: 1;
 	padding: 0;
 	margin-bottom: 1.5rem;
+	margin-right: 5px;
+}
+strong.count {
+	font-size: 90px;
+	margin-right: 15px;
 }
 .main-content-tablecell #counter span sup {
 	font-family: "roboto-bold", sans-serif;
@@ -1081,7 +1086,6 @@ header .social-links ul li a:focus {
 	line-height: 1.143;
 	color: #FFFFFF;
 	margin-bottom: 1.2rem;
-	/* max-width: 600px; */
 	position: relative;
 }
 .main-content-tablecell p {
@@ -1179,6 +1183,9 @@ header .social-links ul li a:focus {
 	.main-content-tablecell #counter span {
 		font-size: 11rem;
 	}
+	strong.count {
+		font-size: 80px;
+	}
 }
 @media only screen and (max-width:1024px) {
 	.main-content-tablecell h1 {
@@ -1194,6 +1201,9 @@ header .social-links ul li a:focus {
 	}
 	.main-content-tablecell #counter span {
 		font-size: 10.4rem;
+	}
+	strong.count {
+		font-size: 70px;
 	}
 	.main-content-tablecell .row {
 		padding-bottom: 12rem;
@@ -1221,6 +1231,9 @@ header .social-links ul li a:focus {
 	.main-content-tablecell #counter span {
 		font-size: 8.4rem;
 	}
+	strong.count {
+		font-size: 60px;
+	}
 	.main-content-tablecell h1 {
 		font-size: 2.7rem;
 	}
@@ -1228,6 +1241,9 @@ header .social-links ul li a:focus {
 @media only screen and (max-width:500px) {
 	.main-content-tablecell #counter span {
 		font-size: 7.2rem;
+	}
+	strong.count {
+		font-size: 50px;
 	}
 }
 @media only screen and (max-width:400px) {
@@ -1240,6 +1256,9 @@ header .social-links ul li a:focus {
 	.main-content-tablecell #counter span {
 		font-size: 6rem;
 		margin-bottom: .9rem;
+	}
+	strong.count {
+		font-size: 40px;
 	}
 	.main-content-tablecell #counter span sup {
 		font-size: .2em;

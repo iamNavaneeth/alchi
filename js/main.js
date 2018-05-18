@@ -1,9 +1,9 @@
-/** 
+/**
  * ===================================================================
  * Main js
  *
- * ------------------------------------------------------------------- 
- */ 
+ * -------------------------------------------------------------------
+ */
 
 (function($) {
 
@@ -11,21 +11,21 @@
 
 	/* --------------------------------------------------- */
 	/* Preloader
-	------------------------------------------------------ */ 
+	------------------------------------------------------ */
    $(window).load(function() {
-      // will first fade out the loading animation 
+      // will first fade out the loading animation
     	$("#loader").fadeOut("slow", function(){
 
         // will fade out the whole DIV that covers the website.
         $("#preloader").delay(300).fadeOut("slow");
 
-      }); 
+      });
   	})
 
 
   	/*---------------------------------------------------- */
 	/* FitVids
-	------------------------------------------------------ */ 
+	------------------------------------------------------ */
   	$(".fluid-video-wrapper").fitVids();
 
 
@@ -54,12 +54,12 @@
 	   curveLines: true,
 	   density: 10000,
 	   proximity: 110
-	}); 
+	});
 
 
 	/*-----------------------------------------------------*/
 	/* tabs
-  	-------------------------------------------------------*/	
+  	-------------------------------------------------------*/
 	$(".tab-content").hide();
 	$(".tab-content").first().show();
 
@@ -76,7 +76,7 @@
   	/* Smooth Scrolling
   	------------------------------------------------------*/
   	$('.smoothscroll').on('click', function (e) {
-	 	
+
 	 	e.preventDefault();
 
    	var target = this.hash,
@@ -94,7 +94,7 @@
   	/* --------------------------------------------------- */
 	/*  Placeholder Plugin Settings
 	------------------------------------------------------ */
-	$('input, textarea, select').placeholder()  
+	$('input, textarea, select').placeholder()
 
 
   	/*---------------------------------------------------- */
@@ -145,28 +145,28 @@
 
 			var sLoader = $('#submit-loader');
 
-			$.ajax({      	
+			$.ajax({
 
 		      type: "POST",
 		      url: "inc/sendEmail.php",
 		      data: $(form).serialize(),
-		      beforeSend: function() { 
+		      beforeSend: function() {
 
-		      	sLoader.fadeIn(); 
+		      	sLoader.fadeIn();
 
 		      },
 		      success: function(msg) {
 
 	            // Message was sent
 	            if (msg == 'OK') {
-	            	sLoader.fadeOut(); 
+	            	sLoader.fadeOut();
 	               $('#message-warning').hide();
 	               $('#contactForm').fadeOut();
-	               $('#message-success').fadeIn();   
+	               $('#message-success').fadeIn();
 	            }
 	            // There was an error
 	            else {
-	            	sLoader.fadeOut(); 
+	            	sLoader.fadeOut();
 	               $('#message-warning').html(msg);
 		            $('#message-warning').fadeIn();
 	            }
@@ -174,13 +174,13 @@
 		      },
 		      error: function() {
 
-		      	sLoader.fadeOut(); 
+		      	sLoader.fadeOut();
 		      	$('#message-warning').html("Something went wrong. Please try again.");
 		         $('#message-warning').fadeIn();
 
 		      }
 
-	      });     		
+	      });
   		}
 
 	});
@@ -189,21 +189,21 @@
 	/*----------------------------------------------------*/
 	/* Final Countdown Settings
 	------------------------------------------------------ */
-	var finalDate = '2018/01/01';
+	var finalDate = '2018/10/17';
 
 	$('div#counter').countdown(finalDate)
    	.on('update.countdown', function(event) {
 
    		$(this).html(event.strftime('<div class=\"half\">' +
-   											 '<span>%D <sup>days</sup></span>' + 
-   										 	 '<span>%H <sup>hours</sup></span>' + 
+   											 '<span>%D <sup>days</sup></span>' +
+   										 	 '<span>%H <sup>hours</sup></span>' +
    										 	 '</div>' +
    										 	 '<div class=\"half\">' +
    										 	 '<span>%M <sup>mins</sup></span>' +
    										 	 '<span>%S <sup>secs</sup></span>' +
    										 	 '</div>'));
 
-   });     
- 
+   });
+
 
 })(jQuery);
