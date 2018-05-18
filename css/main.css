@@ -1081,14 +1081,14 @@ header .social-links ul li a:focus {
 	line-height: 1.143;
 	color: #FFFFFF;
 	margin-bottom: 1.2rem;
-	max-width: 600px;
+	/* max-width: 600px; */
 	position: relative;
 }
 .main-content-tablecell p {
 	color: rgba(255, 255, 255, 0.3);
 	font-family: "roboto-regular", sans-serif;
 	font-size: 1.8rem;
-	max-width: 400px;
+	max-width: 530px;
 }
 
 .scroll-icon {
